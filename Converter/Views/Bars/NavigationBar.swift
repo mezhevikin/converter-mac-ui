@@ -1,12 +1,11 @@
 import UIKit
 import TinyLayout
 
-class NavigationBar: UINavigationBar {
+class NavigationBar: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        addBody(contentView)
-        contentView.addSubviews([
+        addSubviews([
             leftButton,
             titleLabel,
             rightButton
@@ -15,41 +14,37 @@ class NavigationBar: UINavigationBar {
     
     func cons() -> [NSLayoutConstraint] {
         [
-            leftButton.leadingAnchor.equal(contentView.leadingAnchor),
-            leftButton.topAnchor.equal(contentView.topAnchor),
-            leftButton.bottomAnchor.equal(contentView.bottomAnchor),
-            leftButton.widthAnchor.equal(50),
+            leftButton.leadingAnchor.equal(leadingAnchor),
+            leftButton.topAnchor.equal(topAnchor),
+            leftButton.bottomAnchor.equal(bottomAnchor),
+            leftButton.widthAnchor.equal(scale(50)),
             
             titleLabel.leadingAnchor.equal(leftButton.trailingAnchor),
-            titleLabel.topAnchor.equal(contentView.topAnchor),
-            titleLabel.bottomAnchor.equal(contentView.bottomAnchor),
+            titleLabel.topAnchor.equal(topAnchor),
+            titleLabel.bottomAnchor.equal(bottomAnchor),
             
             rightButton.leadingAnchor.equal(titleLabel.trailingAnchor),
-            rightButton.topAnchor.equal(contentView.topAnchor),
-            rightButton.bottomAnchor.equal(contentView.bottomAnchor),
-            rightButton.trailingAnchor.equal(contentView.trailingAnchor),
-            rightButton.widthAnchor.equal(50)
+            rightButton.topAnchor.equal(topAnchor),
+            rightButton.bottomAnchor.equal(bottomAnchor),
+            rightButton.trailingAnchor.equal(trailingAnchor),
+            rightButton.widthAnchor.equal(scale(50))
         ]
     }
     
-    private let contentView = UIView {
-        $0.backgroundColor = .cyan
-    }
-    
     private let leftButton = BarButton {
-        $0.tintColor = .blue
+        $0.tintColor = .tint
         $0.accessibilityIdentifier = "leftNavigationButton"
     }
     
     private let rightButton = BarButton {
-        $0.tintColor = .blue
+        $0.tintColor = .tint
         $0.accessibilityIdentifier = "rightNavigationButton"
     }
     
     private let titleLabel = UILabel {
-        $0.textColor = .label
+        $0.textColor = .text
         $0.textAlignment = .center
-        $0.font = .bold(17)
+        $0.font = .bold(scale(17))
     }
     
     var item: UINavigationItem? {
@@ -66,10 +61,6 @@ class NavigationBar: UINavigationBar {
     
     required init?(coder: NSCoder) {
         fatalError("init")
-    }
-    
-    override func sizeThatFits(_ size: CGSize) -> CGSize {
-        CGSize(width: UIScreen.main.bounds.width, height: 75)
     }
     
 }

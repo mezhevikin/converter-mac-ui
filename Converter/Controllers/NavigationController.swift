@@ -1,35 +1,24 @@
 import UIKit
-import TinyLayout
 
-class NavigationController: UINavigationController, UINavigationControllerDelegate {
+class NavigationController: UINavigationController {
 
-    let navBar = NavigationBar()
+    override init(rootViewController: UIViewController) {
+        super.init(rootViewController:
+            BarController(controller: rootViewController)
+        )
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationBar.isHidden = true
-        delegate = self
-        setValue(navBar, forKey: "navigationBar")
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         .lightContent
     }
     
-    func navigationController(
-        _ navigationController: UINavigationController,
-        willShow controller: UIViewController,
-        animated: Bool
-    ) {
-        navBar.item = controller.navigationItem
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init")
     }
-
-    func navigationController(
-        _ navigationController: UINavigationController,
-        didShow viewController: UIViewController,
-        animated: Bool
-    ) {
-        
-    }
-
+    
 }

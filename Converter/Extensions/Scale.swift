@@ -3,7 +3,6 @@ import UIKit
 public class Scale {
     
      static public var factor: CGFloat = {
-        if UIDevice.isMac { return 1 }
         let width = UIScreen.main.bounds.width
         let height = UIScreen.main.bounds.height
         let size = [
@@ -24,8 +23,7 @@ public class Scale {
             [834, 1112]: 1.4,
             [1024, 1366]: 1.7
         ]
-        let min: CGFloat = UIDevice.isPhone ? 320 : 768
-        return factors[size] ?? width / min
+        return factors[size] ?? width / 320
     }()
     
 }

@@ -13,6 +13,14 @@
 		FA2464CD28EAED4200034C66 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2464CA28EAED4200034C66 /* UIView.swift */; };
 		FA88571F28EEECDD007F07BD /* Measure in Frameworks */ = {isa = PBXBuildFile; productRef = FA88571E28EEECDD007F07BD /* Measure */; };
 		FA88572128EEEDD8007F07BD /* Scale.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA88572028EEEDD8007F07BD /* Scale.swift */; };
+		FA88572B28EEEEE6007F07BD /* BarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA88572528EEEEE6007F07BD /* BarButton.swift */; };
+		FA88572C28EEEEE6007F07BD /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA88572728EEEEE6007F07BD /* NavigationBar.swift */; };
+		FA88572D28EEEEE6007F07BD /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA88572828EEEEE6007F07BD /* SearchBar.swift */; };
+		FA88572E28EEEEE6007F07BD /* ConverterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA88572A28EEEEE6007F07BD /* ConverterView.swift */; };
+		FA88573328EEF20A007F07BD /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA88573228EEF20A007F07BD /* Colors.swift */; };
+		FA88573528EEF321007F07BD /* Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA88573428EEF321007F07BD /* Localized.swift */; };
+		FA88573C28EEF801007F07BD /* BarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA88573A28EEF801007F07BD /* BarController.swift */; };
+		FA88573D28EEF801007F07BD /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA88573B28EEF801007F07BD /* NavigationController.swift */; };
 		FAC5A1D528B3766D0012C8B7 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5A1D428B3766D0012C8B7 /* Currency.swift */; };
 		FAF330FF28A64C1D00E02591 /* ConverterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF330FE28A64C1D00E02591 /* ConverterTests.swift */; };
 		FAF3310928A64C1D00E02591 /* ConverterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF3310828A64C1D00E02591 /* ConverterUITests.swift */; };
@@ -45,6 +53,14 @@
 		FA2464C928EAED4200034C66 /* Maker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Maker.swift; sourceTree = "<group>"; };
 		FA2464CA28EAED4200034C66 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		FA88572028EEEDD8007F07BD /* Scale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scale.swift; sourceTree = "<group>"; };
+		FA88572528EEEEE6007F07BD /* BarButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarButton.swift; sourceTree = "<group>"; };
+		FA88572728EEEEE6007F07BD /* NavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
+		FA88572828EEEEE6007F07BD /* SearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		FA88572A28EEEEE6007F07BD /* ConverterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConverterView.swift; sourceTree = "<group>"; };
+		FA88573228EEF20A007F07BD /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		FA88573428EEF321007F07BD /* Localized.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localized.swift; sourceTree = "<group>"; };
+		FA88573A28EEF801007F07BD /* BarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarController.swift; sourceTree = "<group>"; };
+		FA88573B28EEF801007F07BD /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		FAC5A1D428B3766D0012C8B7 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		FAF330E428A64C1C00E02591 /* Converter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Converter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAF330FA28A64C1D00E02591 /* ConverterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConverterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,9 +102,61 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA88572228EEEEE6007F07BD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FA88572928EEEEE6007F07BD /* Views */,
+				FA88572628EEEEE6007F07BD /* Bars */,
+				FA88572328EEEEE6007F07BD /* Cells */,
+				FA88572428EEEEE6007F07BD /* Buttons */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FA88572328EEEEE6007F07BD /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		FA88572428EEEEE6007F07BD /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				FA88572528EEEEE6007F07BD /* BarButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		FA88572628EEEEE6007F07BD /* Bars */ = {
+			isa = PBXGroup;
+			children = (
+				FA88572728EEEEE6007F07BD /* NavigationBar.swift */,
+				FA88572828EEEEE6007F07BD /* SearchBar.swift */,
+			);
+			path = Bars;
+			sourceTree = "<group>";
+		};
+		FA88572928EEEEE6007F07BD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FA88572A28EEEEE6007F07BD /* ConverterView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FA88573128EEF1E6007F07BD /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				FA88573228EEF20A007F07BD /* Colors.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
 		FAC5A1D828B37A3A0012C8B7 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				FA88573428EEF321007F07BD /* Localized.swift */,
 				FA88572028EEEDD8007F07BD /* Scale.swift */,
 				FA2464C828EAED4200034C66 /* Delay.swift */,
 				FA2464C928EAED4200034C66 /* Maker.swift */,
@@ -121,11 +189,12 @@
 			isa = PBXGroup;
 			children = (
 				FAF3311A28A64CE100E02591 /* Controllers */,
+				FA88572228EEEEE6007F07BD /* Views */,
 				FAF3311928A64CE100E02591 /* Models */,
 				FAC5A1D828B37A3A0012C8B7 /* Extensions */,
-				FAF3313128A64E8000E02591 /* View */,
 				FAF3312228A64CE100E02591 /* Delegates */,
 				FAF3312E28A64E5300E02591 /* Resources */,
+				FA88573128EEF1E6007F07BD /* Config */,
 				FAF3311728A64CE100E02591 /* Support */,
 			);
 			path = Converter;
@@ -168,6 +237,8 @@
 			isa = PBXGroup;
 			children = (
 				FAF3312C28A64E0300E02591 /* ConverterController.swift */,
+				FA88573B28EEF801007F07BD /* NavigationController.swift */,
+				FA88573A28EEF801007F07BD /* BarController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -187,13 +258,6 @@
 				FAF3312F28A64E5300E02591 /* Assets.xcassets */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		FAF3313128A64E8000E02591 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -333,13 +397,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA88572B28EEEEE6007F07BD /* BarButton.swift in Sources */,
 				FAC5A1D528B3766D0012C8B7 /* Currency.swift in Sources */,
+				FA88573C28EEF801007F07BD /* BarController.swift in Sources */,
 				FAF3312A28A64CE100E02591 /* AppDelegate.swift in Sources */,
 				FA2464CC28EAED4200034C66 /* Maker.swift in Sources */,
 				FA2464CD28EAED4200034C66 /* UIView.swift in Sources */,
+				FA88573528EEF321007F07BD /* Localized.swift in Sources */,
+				FA88572C28EEEEE6007F07BD /* NavigationBar.swift in Sources */,
 				FAF3312D28A64E0300E02591 /* ConverterController.swift in Sources */,
+				FA88573D28EEF801007F07BD /* NavigationController.swift in Sources */,
 				FAF3312B28A64CE100E02591 /* SceneDelegate.swift in Sources */,
+				FA88573328EEF20A007F07BD /* Colors.swift in Sources */,
 				FA88572128EEEDD8007F07BD /* Scale.swift in Sources */,
+				FA88572E28EEEEE6007F07BD /* ConverterView.swift in Sources */,
+				FA88572D28EEEEE6007F07BD /* SearchBar.swift in Sources */,
 				FA2464CB28EAED4200034C66 /* Delay.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
