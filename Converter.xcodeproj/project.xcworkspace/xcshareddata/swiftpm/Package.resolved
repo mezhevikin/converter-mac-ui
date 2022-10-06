@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "measure",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/mezhevikin/Measure.git",
+      "state" : {
+        "revision" : "e17d477dc632ebe63a483a72905e267a94ab54d1",
+        "version" : "0.0.1"
+      }
+    },
+    {
+      "identity" : "tinylayout",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/mezhevikin/TinyLayout.git",
+      "state" : {
+        "revision" : "8d3b92819b135084e873f0831670537cb0f4f339",
+        "version" : "0.0.1"
+      }
+    }
+  ],
+  "version" : 2
+}
