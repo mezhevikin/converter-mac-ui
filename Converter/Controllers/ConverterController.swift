@@ -34,7 +34,7 @@ class ConverterController: UIViewController {
     }
     
     @objc func openSettings() {
-        
+        push(SettingsController())
     }
     
 }
