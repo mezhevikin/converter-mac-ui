@@ -5,9 +5,10 @@ class ConverterView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        //toolBar.backgroundColor = .blue
         addSubviews([
-            toolBar
+            toolBar,
+            fieldsView,
+            keyboardView
         ], constraints: cons())
     }
     
@@ -16,11 +17,36 @@ class ConverterView: UIView {
             toolBar.leftAnchor.equal(leftAnchor),
             toolBar.topAnchor.equal(topAnchor),
             toolBar.rightAnchor.equal(rightAnchor),
-            toolBar.heightAnchor.equal(scale(50))
+            toolBar.heightAnchor.equal(scale(50)),
+            
+            fieldsView.leftAnchor.equal(leftAnchor),
+            fieldsView.topAnchor.equal(toolBar.bottomAnchor),
+            fieldsView.rightAnchor.equal(rightAnchor),
+            fieldsView.heightAnchor.equal(scale(350)),
+            
+            keyboardView.leftAnchor.equal(leftAnchor),
+            keyboardView.topAnchor.equal(fieldsView.bottomAnchor),
+            keyboardView.rightAnchor.equal(rightAnchor),
+            keyboardView.bottomAnchor.equal(bottomAnchor)
         ]
     }
     
     let toolBar = ToolBar()
+    
+    let fieldsView = UIStackView {
+        $0.translatesAutoresizingMaskIntoConstraints = false
+        $0.axis = .vertical
+        $0.distribution = .fillEqually
+        for currency in Currency.all {
+            let field = CurrencyField()
+            field.currency = currency
+            $0.addArrangedSubview(field)
+        }
+    }
+    
+    let keyboardView = UIView {
+        $0.backgroundColor = .darkGray
+    }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)

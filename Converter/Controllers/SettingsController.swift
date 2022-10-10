@@ -6,7 +6,7 @@ class SettingsController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = l("Settings")
-        view.backgroundColor = .gray
+        view.backgroundColor = .background
         addBackButton()
     }
     

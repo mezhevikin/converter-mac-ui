@@ -12,6 +12,7 @@
 		FA2464CC28EAED4200034C66 /* Maker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2464C928EAED4200034C66 /* Maker.swift */; };
 		FA2464CD28EAED4200034C66 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2464CA28EAED4200034C66 /* UIView.swift */; };
 		FA7A8D6228F422AC00D905FE /* ToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7A8D6128F422AC00D905FE /* ToolBar.swift */; };
+		FA7A8D6428F429C500D905FE /* CurrencyField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7A8D6328F429C500D905FE /* CurrencyField.swift */; };
 		FA88571F28EEECDD007F07BD /* Measure in Frameworks */ = {isa = PBXBuildFile; productRef = FA88571E28EEECDD007F07BD /* Measure */; };
 		FA88572128EEEDD8007F07BD /* Scale.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA88572028EEEDD8007F07BD /* Scale.swift */; };
 		FA88572B28EEEEE6007F07BD /* BarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA88572528EEEEE6007F07BD /* BarButton.swift */; };
@@ -24,6 +25,7 @@
 		FA88573D28EEF801007F07BD /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA88573B28EEF801007F07BD /* NavigationController.swift */; };
 		FA88574128EF131C007F07BD /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA88574028EF131C007F07BD /* SettingsController.swift */; };
 		FAC5A1D528B3766D0012C8B7 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5A1D428B3766D0012C8B7 /* Currency.swift */; };
+		FAE4F6EA28F4331C00C1CB58 /* Currencies.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FAE4F6E928F4331C00C1CB58 /* Currencies.bundle */; };
 		FAF330FF28A64C1D00E02591 /* ConverterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF330FE28A64C1D00E02591 /* ConverterTests.swift */; };
 		FAF3310928A64C1D00E02591 /* ConverterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF3310828A64C1D00E02591 /* ConverterUITests.swift */; };
 		FAF3310B28A64C1D00E02591 /* ConverterUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF3310A28A64C1D00E02591 /* ConverterUITestsLaunchTests.swift */; };
@@ -55,6 +57,7 @@
 		FA2464C928EAED4200034C66 /* Maker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Maker.swift; sourceTree = "<group>"; };
 		FA2464CA28EAED4200034C66 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		FA7A8D6128F422AC00D905FE /* ToolBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolBar.swift; sourceTree = "<group>"; };
+		FA7A8D6328F429C500D905FE /* CurrencyField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyField.swift; sourceTree = "<group>"; };
 		FA88572028EEEDD8007F07BD /* Scale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scale.swift; sourceTree = "<group>"; };
 		FA88572528EEEEE6007F07BD /* BarButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarButton.swift; sourceTree = "<group>"; };
 		FA88572728EEEEE6007F07BD /* NavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
@@ -66,6 +69,7 @@
 		FA88573B28EEF801007F07BD /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		FA88574028EF131C007F07BD /* SettingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		FAC5A1D428B3766D0012C8B7 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		FAE4F6E928F4331C00C1CB58 /* Currencies.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Currencies.bundle; sourceTree = "<group>"; };
 		FAF330E428A64C1C00E02591 /* Converter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Converter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAF330FA28A64C1D00E02591 /* ConverterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConverterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAF330FE28A64C1D00E02591 /* ConverterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterTests.swift; sourceTree = "<group>"; };
@@ -146,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				FA88572A28EEEEE6007F07BD /* ConverterView.swift */,
+				FA7A8D6328F429C500D905FE /* CurrencyField.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -261,6 +266,7 @@
 		FAF3312E28A64E5300E02591 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				FAE4F6E928F4331C00C1CB58 /* Currencies.bundle */,
 				FAF3312F28A64E5300E02591 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -378,6 +384,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAE4F6EA28F4331C00C1CB58 /* Currencies.bundle in Resources */,
 				FAF3313028A64E5300E02591 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -409,6 +416,7 @@
 				FA88574128EF131C007F07BD /* SettingsController.swift in Sources */,
 				FAF3312A28A64CE100E02591 /* AppDelegate.swift in Sources */,
 				FA2464CC28EAED4200034C66 /* Maker.swift in Sources */,
+				FA7A8D6428F429C500D905FE /* CurrencyField.swift in Sources */,
 				FA2464CD28EAED4200034C66 /* UIView.swift in Sources */,
 				FA88573528EEF321007F07BD /* Localized.swift in Sources */,
 				FA88572C28EEEEE6007F07BD /* NavigationBar.swift in Sources */,
