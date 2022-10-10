@@ -26,6 +26,8 @@
 		FA88574128EF131C007F07BD /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA88574028EF131C007F07BD /* SettingsController.swift */; };
 		FAC5A1D528B3766D0012C8B7 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5A1D428B3766D0012C8B7 /* Currency.swift */; };
 		FAE4F6EA28F4331C00C1CB58 /* Currencies.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FAE4F6E928F4331C00C1CB58 /* Currencies.bundle */; };
+		FAE4F6EC28F43A2400C1CB58 /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE4F6EB28F43A2400C1CB58 /* KeyboardView.swift */; };
+		FAE4F6EE28F4437D00C1CB58 /* KeyboardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE4F6ED28F4437D00C1CB58 /* KeyboardButton.swift */; };
 		FAF330FF28A64C1D00E02591 /* ConverterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF330FE28A64C1D00E02591 /* ConverterTests.swift */; };
 		FAF3310928A64C1D00E02591 /* ConverterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF3310828A64C1D00E02591 /* ConverterUITests.swift */; };
 		FAF3310B28A64C1D00E02591 /* ConverterUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF3310A28A64C1D00E02591 /* ConverterUITestsLaunchTests.swift */; };
@@ -70,6 +72,8 @@
 		FA88574028EF131C007F07BD /* SettingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		FAC5A1D428B3766D0012C8B7 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		FAE4F6E928F4331C00C1CB58 /* Currencies.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Currencies.bundle; sourceTree = "<group>"; };
+		FAE4F6EB28F43A2400C1CB58 /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
+		FAE4F6ED28F4437D00C1CB58 /* KeyboardButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardButton.swift; sourceTree = "<group>"; };
 		FAF330E428A64C1C00E02591 /* Converter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Converter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAF330FA28A64C1D00E02591 /* ConverterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConverterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAF330FE28A64C1D00E02591 /* ConverterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterTests.swift; sourceTree = "<group>"; };
@@ -131,6 +135,7 @@
 		FA88572428EEEEE6007F07BD /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
+				FAE4F6ED28F4437D00C1CB58 /* KeyboardButton.swift */,
 				FA88572528EEEEE6007F07BD /* BarButton.swift */,
 			);
 			path = Buttons;
@@ -151,6 +156,7 @@
 			children = (
 				FA88572A28EEEEE6007F07BD /* ConverterView.swift */,
 				FA7A8D6328F429C500D905FE /* CurrencyField.swift */,
+				FAE4F6EB28F43A2400C1CB58 /* KeyboardView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -423,7 +429,9 @@
 				FA7A8D6228F422AC00D905FE /* ToolBar.swift in Sources */,
 				FAF3312D28A64E0300E02591 /* ConverterController.swift in Sources */,
 				FA88573D28EEF801007F07BD /* NavigationController.swift in Sources */,
+				FAE4F6EC28F43A2400C1CB58 /* KeyboardView.swift in Sources */,
 				FAF3312B28A64CE100E02591 /* SceneDelegate.swift in Sources */,
+				FAE4F6EE28F4437D00C1CB58 /* KeyboardButton.swift in Sources */,
 				FA88573328EEF20A007F07BD /* Colors.swift in Sources */,
 				FA88572128EEEDD8007F07BD /* Scale.swift in Sources */,
 				FA88572E28EEEEE6007F07BD /* ConverterView.swift in Sources */,

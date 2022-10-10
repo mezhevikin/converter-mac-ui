@@ -22,7 +22,7 @@ class ConverterView: UIView {
             fieldsView.leftAnchor.equal(leftAnchor),
             fieldsView.topAnchor.equal(toolBar.bottomAnchor),
             fieldsView.rightAnchor.equal(rightAnchor),
-            fieldsView.heightAnchor.equal(scale(350)),
+            fieldsView.heightAnchor.equal(scale(250)),
             
             keyboardView.leftAnchor.equal(leftAnchor),
             keyboardView.topAnchor.equal(fieldsView.bottomAnchor),
@@ -37,16 +37,14 @@ class ConverterView: UIView {
         $0.translatesAutoresizingMaskIntoConstraints = false
         $0.axis = .vertical
         $0.distribution = .fillEqually
-        for currency in Currency.all {
+        for currency in Currency.all.prefix(5) {
             let field = CurrencyField()
             field.currency = currency
             $0.addArrangedSubview(field)
         }
     }
     
-    let keyboardView = UIView {
-        $0.backgroundColor = .darkGray
-    }
+    let keyboardView = KeyboardView()
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
