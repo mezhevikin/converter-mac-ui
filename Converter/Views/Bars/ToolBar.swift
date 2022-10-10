@@ -7,10 +7,10 @@ class ToolBar: UIView {
         super.init(frame: frame)
         addSubviews([
             refreshButton,
-            settingsButton,
             indicator,
             titleLabel,
-            dateLabel
+            dateLabel,
+            settingsButton
         ], constraints: cons())
     }
     
@@ -27,29 +27,29 @@ class ToolBar: UIView {
             indicator.bottomAnchor.equal(bottomAnchor),
             indicator.widthAnchor.equal(heightAnchor),
             
-            settingsButton.topAnchor.equal(topAnchor),
-            settingsButton.rightAnchor.equal(rightAnchor),
-            settingsButton.bottomAnchor.equal(bottomAnchor),
-            settingsButton.widthAnchor.equal(heightAnchor),
-            
             titleLabel.topAnchor.equal(topAnchor, scale(6)),
             titleLabel.leftAnchor.equal(refreshButton.rightAnchor, p),
             titleLabel.rightAnchor.equal(settingsButton.leftAnchor, -p),
             
             dateLabel.leftAnchor.equal(refreshButton.rightAnchor, p),
             dateLabel.rightAnchor.equal(settingsButton.leftAnchor, -p),
-            dateLabel.topAnchor.equal(titleLabel.bottomAnchor, scale(3))
+            dateLabel.topAnchor.equal(titleLabel.bottomAnchor, scale(3)),
+            
+            settingsButton.topAnchor.equal(topAnchor),
+            settingsButton.rightAnchor.equal(rightAnchor),
+            settingsButton.bottomAnchor.equal(bottomAnchor),
+            settingsButton.widthAnchor.equal(heightAnchor)
         ]
     }
     
     let refreshButton = BarButton {
         $0.accessibilityIdentifier = "refresh"
-        $0.iconView.setIcon("refresh", color: .white)
+        $0.iconView.setIcon("refresh", color: .tint)
     }
     
     let settingsButton = BarButton {
         $0.accessibilityIdentifier = "settings"
-        $0.iconView.setIcon("settings", color: .white)
+        $0.iconView.setIcon("settings", color: .tint)
     }
     
     let titleLabel = UILabel {
