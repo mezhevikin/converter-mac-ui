@@ -28,7 +28,7 @@ class CurrencyField: UIView {
     
     let field = UIView {
         $0.backgroundColor = .white
-        //$0.layer.cornerRadius = 10
+        $0.layer.cornerRadius = 5
     }
     
     let fieldLabel = UILabel {
@@ -56,7 +56,7 @@ class CurrencyButton: UIControl {
     override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = .hex("#ffffff", 0.2)
-        //layer.cornerRadius = 10
+        layer.cornerRadius = 5
         addSubviews([iconView, codeLabel], constraints: [
             iconView.leftAnchor.equal(leftAnchor, scale(10)),
             iconView.centerYAnchor.equal(centerYAnchor),
@@ -71,8 +71,10 @@ class CurrencyButton: UIControl {
     }
     
     let iconView = UIImageView {
+        $0.clipsToBounds = true
         $0.layer.borderWidth = 0.5
         $0.layer.borderColor = UIColor.gray.cgColor
+        $0.layer.cornerRadius = scale(12)
     }
     
     let codeLabel = UILabel {
