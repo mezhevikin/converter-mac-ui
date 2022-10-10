@@ -45,6 +45,7 @@ class NavigationBar: UIView {
         $0.textColor = .text
         $0.textAlignment = .center
         $0.font = .bold(scale(17))
+        $0.adjustsFontSizeToFitWidth = true
     }
     
     var item: UINavigationItem? {
