@@ -5,6 +5,12 @@ class CurrencyField: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        field.addSubview(fieldLabel, constraints: [
+            fieldLabel.leftAnchor.equal(field.leftAnchor, scale(10)),
+            fieldLabel.topAnchor.equal(field.topAnchor),
+            fieldLabel.rightAnchor.equal(field.rightAnchor, scale(-10)),
+            fieldLabel.bottomAnchor.equal(field.bottomAnchor)
+        ])
         addSubviews([button, field], constraints: [
             button.leftAnchor.equal(leftAnchor, scale(10)),
             button.centerYAnchor.equal(centerYAnchor),
@@ -20,9 +26,12 @@ class CurrencyField: UIView {
     
     let button = CurrencyButton()
     
-    let field = UILabel {
+    let field = UIView {
         $0.backgroundColor = .white
-        $0.layer.cornerRadius = 10
+        //$0.layer.cornerRadius = 10
+    }
+    
+    let fieldLabel = UILabel {
         $0.textAlignment = .right
         $0.text = "1 000 000"
         $0.adjustsFontSizeToFitWidth = true
