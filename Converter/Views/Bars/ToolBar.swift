@@ -1,5 +1,5 @@
 import UIKit
-import TinyLayout
+import SnapKit
 
 class ToolBar: UIView {
     
@@ -11,35 +11,32 @@ class ToolBar: UIView {
             titleLabel,
             dateLabel,
             settingsButton
-        ], constraints: cons())
+        ])
+        makeConstains()
     }
     
-    func cons() -> [NSLayoutConstraint] {
-        let p = scale(10)
-        return [
-            refreshButton.leftAnchor.equal(leftAnchor),
-            refreshButton.topAnchor.equal(topAnchor),
-            refreshButton.bottomAnchor.equal(bottomAnchor),
-            refreshButton.widthAnchor.equal(heightAnchor),
-            
-            indicator.leftAnchor.equal(leftAnchor),
-            indicator.topAnchor.equal(topAnchor),
-            indicator.bottomAnchor.equal(bottomAnchor),
-            indicator.widthAnchor.equal(heightAnchor),
-            
-            titleLabel.topAnchor.equal(topAnchor, scale(6)),
-            titleLabel.leftAnchor.equal(refreshButton.rightAnchor, p),
-            titleLabel.rightAnchor.equal(settingsButton.leftAnchor, -p),
-            
-            dateLabel.leftAnchor.equal(refreshButton.rightAnchor, p),
-            dateLabel.rightAnchor.equal(settingsButton.leftAnchor, -p),
-            dateLabel.topAnchor.equal(titleLabel.bottomAnchor, scale(3)),
-            
-            settingsButton.topAnchor.equal(topAnchor),
-            settingsButton.rightAnchor.equal(rightAnchor),
-            settingsButton.bottomAnchor.equal(bottomAnchor),
-            settingsButton.widthAnchor.equal(heightAnchor)
-        ]
+    func makeConstains() {
+        refreshButton.snp.makeConstraints {
+            $0.left.top.bottom.equalTo(self)
+            $0.width.equalTo(self.snp.height)
+        }
+        indicator.snp.makeConstraints {
+            $0.left.top.bottom.equalTo(self)
+            $0.width.equalTo(self.snp.height)
+        }
+        settingsButton.snp.makeConstraints {
+            $0.right.top.bottom.equalTo(self)
+            $0.width.equalTo(self.snp.height)
+        }
+        titleLabel.snp.makeConstraints {
+            $0.left.equalTo(refreshButton.snp.right).offset(scale(10))
+            $0.right.equalTo(settingsButton.snp.left).offset(-scale(10))
+            $0.top.equalTo(self).offset(scale(6))
+        }
+        dateLabel.snp.makeConstraints {
+            $0.left.right.equalTo(titleLabel)
+            $0.top.equalTo(titleLabel.snp.bottom).offset(scale(3))
+        }
     }
     
     let refreshButton = BarButton {

@@ -24,7 +24,7 @@
 		FA88573C28EEF801007F07BD /* BarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA88573A28EEF801007F07BD /* BarController.swift */; };
 		FA88573D28EEF801007F07BD /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA88573B28EEF801007F07BD /* NavigationController.swift */; };
 		FA88574128EF131C007F07BD /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA88574028EF131C007F07BD /* SettingsController.swift */; };
-		FAC1BF16290148D70043EB4F /* PinLayout in Frameworks */ = {isa = PBXBuildFile; productRef = FAC1BF15290148D70043EB4F /* PinLayout */; };
+		FAC1BF1929015A6B0043EB4F /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = FAC1BF1829015A6B0043EB4F /* SnapKit */; };
 		FAC5A1D528B3766D0012C8B7 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5A1D428B3766D0012C8B7 /* Currency.swift */; };
 		FAE4F6EA28F4331C00C1CB58 /* Currencies.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FAE4F6E928F4331C00C1CB58 /* Currencies.bundle */; };
 		FAE4F6EC28F43A2400C1CB58 /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE4F6EB28F43A2400C1CB58 /* KeyboardView.swift */; };
@@ -91,7 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAC1BF16290148D70043EB4F /* PinLayout in Frameworks */,
+				FAC1BF1929015A6B0043EB4F /* SnapKit in Frameworks */,
 				FA2464C728EAEAFA00034C66 /* TinyLayout in Frameworks */,
 				FA88571F28EEECDD007F07BD /* Measure in Frameworks */,
 			);
@@ -296,7 +296,7 @@
 			packageProductDependencies = (
 				FA2464C628EAEAFA00034C66 /* TinyLayout */,
 				FA88571E28EEECDD007F07BD /* Measure */,
-				FAC1BF15290148D70043EB4F /* PinLayout */,
+				FAC1BF1829015A6B0043EB4F /* SnapKit */,
 			);
 			productName = Converter;
 			productReference = FAF330E428A64C1C00E02591 /* Converter.app */;
@@ -373,7 +373,7 @@
 			packageReferences = (
 				FA2464C528EAEAFA00034C66 /* XCRemoteSwiftPackageReference "TinyLayout" */,
 				FA88571D28EEECDD007F07BD /* XCRemoteSwiftPackageReference "Measure" */,
-				FAC1BF14290148D70043EB4F /* XCRemoteSwiftPackageReference "PinLayout" */,
+				FAC1BF1729015A6B0043EB4F /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = FAF330E528A64C1C00E02591 /* Products */;
 			projectDirPath = "";
@@ -779,11 +779,11 @@
 				minimumVersion = 0.0.1;
 			};
 		};
-		FAC1BF14290148D70043EB4F /* XCRemoteSwiftPackageReference "PinLayout" */ = {
+		FAC1BF1729015A6B0043EB4F /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/layoutBox/PinLayout.git";
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
 			requirement = {
-				branch = master;
+				branch = develop;
 				kind = branch;
 			};
 		};
@@ -800,10 +800,10 @@
 			package = FA88571D28EEECDD007F07BD /* XCRemoteSwiftPackageReference "Measure" */;
 			productName = Measure;
 		};
-		FAC1BF15290148D70043EB4F /* PinLayout */ = {
+		FAC1BF1829015A6B0043EB4F /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = FAC1BF14290148D70043EB4F /* XCRemoteSwiftPackageReference "PinLayout" */;
-			productName = PinLayout;
+			package = FAC1BF1729015A6B0043EB4F /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
