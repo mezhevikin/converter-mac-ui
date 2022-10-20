@@ -1,58 +1,30 @@
 import UIKit
+import TinyLayout
 
-class KeyboardView: UIStackView {
+class KeyboardView: UIView {
     
-    let leftItems: [KeyboardItem] = [
-        .clear,
-        .backspace,
-        .calculator
-    ]
-    
-    let rightItems: [[KeyboardItem]] = [
-        [.seven, .eight, .nine],
-        [.four, .five, .six],
-        [.one, .two, .tree],
-        [.zero, .dot]
+    let buttons: [KeyboardButton] = [
+        .clear, .seven, .eight, .nine,
+        .backspace, .four, .five, .six,
+        .calculator, .one, .two, .tree,
+        .zero, .dot
     ]
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        translatesAutoresizingMaskIntoConstraints = false
-        axis = .horizontal
-        //distribution = .fillEqually
-        spacing = scale(10)
-        addArrangedSubview(leftRowView)
-        addArrangedSubview(rightRowView)
-    }
-    
-    lazy var leftRowView = UIStackView {
-        $0.translatesAutoresizingMaskIntoConstraints = false
-        $0.axis = .vertical
-        $0.distribution = .fillEqually
-        $0.spacing = scale(10)
-        for item in leftItems {
-            let button = KeyboardButton(item: item)
-            $0.addArrangedSubview(button)
-        }
-    }
-    
-    lazy var rightRowView = UIStackView {
-        $0.translatesAutoresizingMaskIntoConstraints = false
-        $0.axis = .vertical
-        $0.distribution = .fillEqually
-        $0.spacing = scale(10)
-        for row in rightItems {
-            let rowView = UIStackView()
-            rowView.translatesAutoresizingMaskIntoConstraints = false
-            rowView.axis = .horizontal
-            rowView.distribution = .fillEqually
-            rowView.spacing = scale(10)
-            for item in row {
-                let button = KeyboardButton(item: item)
-                rowView.addArrangedSubview(button)
+        var constains = [NSLayoutConstraint]()
+        for button in buttons {
+            if button != .clear {
+                constains.append(button.widthAnchor.equal(KeyboardButton.clear.widthAnchor))
             }
-            $0.addArrangedSubview(rowView)
+            if button != .zero {
+                constains.append(button.widthAnchor.equal(KeyboardButton.clear.widthAnchor))
+            }
+            if button != .calculator {
+                constains.append(button.heightAnchor.equal(KeyboardButton.clear.heightAnchor))
+            }
         }
+        addSubviews(buttons, constraints: constains)
     }
     
     required init(coder: NSCoder) {
@@ -61,29 +33,53 @@ class KeyboardView: UIStackView {
     
 }
 
-struct KeyboardItem: Hashable  {
+class KeyboardButton: UIControl {
     
     let symbol: String
     
     init(_ symbol: String) {
         self.symbol = symbol
+        super.init(frame: .zero)
+        clipsToBounds = true
+        translatesAutoresizingMaskIntoConstraints = false
+        isAccessibilityElement = true
+        accessibilityTraits = .button
+        backgroundColor = .hex("#ffffff", 0.2)
+        titleLabel.text = symbol
+        addSubview(titleLabel, constraints: [
+            titleLabel.leftAnchor.equal(leftAnchor),
+            titleLabel.topAnchor.equal(topAnchor),
+            titleLabel.rightAnchor.equal(rightAnchor),
+            titleLabel.bottomAnchor.equal(bottomAnchor)
+        ])
     }
     
-    static let one = KeyboardItem("1")
-    static let two = KeyboardItem("2")
-    static let tree = KeyboardItem("3")
-    static let four = KeyboardItem("4")
-    static let five = KeyboardItem("5")
-    static let six = KeyboardItem("6")
-    static let seven = KeyboardItem("7")
-    static let eight = KeyboardItem("8")
-    static let nine = KeyboardItem("9")
-    static let zero = KeyboardItem("0")
-    static let dot = KeyboardItem(".")
+    lazy var titleLabel = UILabel {
+        $0.textColor = .text
+        $0.font = .system(scale(14))
+        $0.textAlignment = .center
+        $0.adjustsFontSizeToFitWidth = true
+    }
     
-    static let clear = KeyboardItem("C")
-    static let backspace = KeyboardItem("←")
-    static let calculator = KeyboardItem("CAL")
+    required init?(coder: NSCoder) {
+        fatalError("init")
+    }
+    
+    static let one = KeyboardButton("1")
+    static let two = KeyboardButton("2")
+    static let tree = KeyboardButton("3")
+    static let four = KeyboardButton("4")
+    static let five = KeyboardButton("5")
+    static let six = KeyboardButton("6")
+    static let seven = KeyboardButton("7")
+    static let eight = KeyboardButton("8")
+    static let nine = KeyboardButton("9")
+    static let zero = KeyboardButton("0")
+    static let dot = KeyboardButton(".")
+    
+    static let clear = KeyboardButton("C")
+    static let backspace = KeyboardButton("←")
+    static let calculator = KeyboardButton("CAL")
 
     var isBig: Bool { self == .zero }
     
